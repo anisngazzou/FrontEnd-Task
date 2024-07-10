@@ -1,0 +1,10 @@
+<!-- src/app/features/programs/components/program-list/program-list.component.html -->
+<div *ngFor="let program of programs$ | async">
+    <h3>{{ program.sName }}</h3>
+    <ul>
+      <li *ngFor="let piece of program.pieces">
+        <a [routerLink]="['/programs/piece', piece.ID]">{{ piece.sName }}</a>
+      </li>
+    </ul>
+  </div>
+  
