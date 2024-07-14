@@ -69,7 +69,6 @@ export class MaterialDetailsComponent implements OnInit {
     const densities = material.masseVolumique[0].data[1]['Densite'];
     const poissonTemperatures = material.coeffPoisson[0].data[0].Temperature;
     const poissons = material.coeffPoisson[0].data[1]['nuX'];
-
     const mergedTemperatures = Array.from(new Set([...temperatures, ...poissonTemperatures])).sort((a, b) => parseFloat(a) - parseFloat(b));
 
     return {

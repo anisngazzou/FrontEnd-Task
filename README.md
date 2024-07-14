@@ -137,6 +137,30 @@ The application can be inspected using Redux DevTools, allowing for a comprehens
 
 ![Redux DevTools](./src/assets/images/S3.png)
 
+
+
+
+## Future Enhancements and Optimizations 🌟
+
+If given more time, the following enhancements and optimizations would be implemented:
+
+### Unit and E2E Testing 🧪
+- **Unit Tests:** Implement unit tests for components, services, and store using Jasmine and Karma to ensure code quality and functionality.
+- **End-to-End (E2E) Tests:** Implement E2E tests using Protractor or Cypress to test the application flow and user interactions from start to finish.
+
+### Docker Deployment 🐳
+- **Docker Compose:** Set up Docker Compose for containerized deployment of the application and its dependencies, ensuring consistent environments across different stages (development, testing, production).
+
+### Additional Components 📦
+- **Program Search Component:** Allow users to search for programs by name or attributes.
+- **Pagination Component:** Implement pagination for large datasets to improve performance and user experience.
+
+
+### Additional Features 🆕
+- **Dark Mode:** Implement a dark mode toggle for better accessibility and user preference.
+
+
+
 --------
 #FR 🇫🇷
 --------
@@ -279,3 +303,5 @@ Voici quelques captures d'écran démontrant la réactivité et les fonctionnali
 L'application peut être inspectée en utilisant Redux DevTools, permettant un aperçu complet des changements d'état et des actions déclenchées.
 
 ![Redux DevTools](./src/assets/images/S3.png)
+
+
