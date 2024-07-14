@@ -51,7 +51,9 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+            "outputPath": "dist/front-end-task",
+              "baseHref": "https://anisngazzou.github.io/FrontEnd-Task//"
             },
             "development": {
               "buildOptimizer": false,
