@@ -1,0 +1,42 @@
+
+:host {
+    display: block;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  p {
+    color: #666;
+    font-style: italic;
+  }
+  

@@ -1,0 +1,44 @@
+<div *ngIf="material" class="chart-container">
+
+  <div class="chart-section">
+    <ngx-charts-line-chart
+   
+      
+      [scheme]="'cool'"
+      [results]="[
+        { name: 'Density', series: densityData },
+ 
+      ]"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabelDensity"
+      [autoScale]="true"
+  
+      >
+    </ngx-charts-line-chart>
+  </div>
+  <div class="chart-section">
+    <ngx-charts-line-chart
+
+    [scheme]="'vivid'"
+    [results]="[
+      { name: 'Poisson\'s Ratio', series: poissonData }
+    ]"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabelPoisson"
+    [autoScale]="true">
+  </ngx-charts-line-chart>
+  </div>
+  </div>
+  

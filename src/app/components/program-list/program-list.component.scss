@@ -21,11 +21,21 @@
   }
   
   li:hover {
-    background-color: #ddd;
-    transform: scale(1.02);
+    // background-color: #ddd;
+    
+  }
+  .li-piece:hover{
+      background-color: #ddd;
+      transform: scale(1.02);
   }
   
-
+  .selected {
+   border: 1px solid #007bff;
+   
+  }
+  
+ 
+  
   .program-name {
     font-weight: bold;
     color: #333;
