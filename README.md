@@ -1,4 +1,4 @@
-# Angular 16 Project 🚀
+# Front-end-task Angular 16 Project 🚀
 
 This project is a technical test that showcases an Angular application with various features, including state management with NgRx, displaying data in multiple formats, and providing a responsive and mobile-friendly design.
 
@@ -119,7 +119,9 @@ src/
 
 ## Additional Information 📚
 
-This project includes additional features not explicitly mentioned in the test requirements, such as the chart view for visualizing material properties. These features demonstrate advanced capabilities and a thorough understanding of Angular and NgRx.
+This project includes additional features not explicitly mentioned in the test requirements, such as the chart view for visualizing material properties.
+The project demonstrates the variation of data management methods using different data binding techniques such as props, shared store data with NgRx, and local state data. This showcases flexibility and a deep understanding of different state management paradigms in Angular.
+ These features demonstrate a understanding of Angular and NgRx basics.
 
 ### Screenshots 📸
 Below are some screenshots demonstrating the responsiveness and key features of the application. *(Insert images here)*
@@ -136,9 +138,10 @@ The application can be inspected using Redux DevTools, allowing for a comprehens
 ![Redux DevTools](./src/assets/images/S3.png)
 
 --------
+#FR 🇫🇷
 --------
---------
-# Projet Angular 16 🚀
+
+# Front-end-task Projet Angular 16 🚀
 
 Ce projet est un test technique qui présente une application Angular avec diverses fonctionnalités, y compris la gestion d'état avec NgRx, l'affichage des données dans plusieurs formats et la conception responsive adaptée aux mobiles.
 
@@ -259,7 +262,9 @@ src/
 
 ## Informations Supplémentaires 📚
 
-Ce projet inclut des fonctionnalités supplémentaires non explicitement mentionnées dans les exigences du test, telles que la vue graphique pour visualiser les propriétés des matériaux. Ces fonctionnalités démontrent des capacités avancées et une compréhension approfondie d'Angular et de NgRx.
+Ce projet inclut des fonctionnalités supplémentaires non explicitement mentionnées dans les exigences du test, telles que la vue graphique pour visualiser les propriétés des matériaux. 
+Le projet démontre la variation des méthodes de gestion des données en utilisant différentes techniques de liaison de données telles que les props, le store partagé avec NgRx, et l'état local. Cela montre la flexibilité et la compréhension des différents paradigmes de gestion des états en Angular
+Ces fonctionnalités démontrent une compréhension les bases  d'Angular et de NgRx.
 
 ### Captures d'Écran 📸
 Voici quelques captures d'écran démontrant la réactivité et les fonctionnalités clés de l'application. *(Insérez les images ici)*
