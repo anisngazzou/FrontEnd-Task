@@ -39,4 +39,31 @@
     color: #666;
     font-style: italic;
   }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  
+    h2 {
+      margin: 0;
+    }
+  
+    .display-selector {
+      select {
+        padding: 10px;
+   
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: border-color 0.3s;
+        font-size: smaller;
+        &:focus {
+          outline: none;
+          border-color: #007bff;
+        }
+      }
+    }
+  }
+  
+  
   

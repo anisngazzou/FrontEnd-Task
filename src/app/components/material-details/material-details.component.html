@@ -1,51 +1,66 @@
 <div *ngIf="selectedProgram$ | async as selectedProgram">
-    <div *ngIf="selectedMaterial$ | async as material; else noMaterial">
-      <h2>{{material.name}}</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Temperature</th>
-            <th>Density</th>
-            <th>Poisson's Ratio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let tempData of getSortedTemperatureData(material)">
-            <td>{{ tempData.temperature }}</td>
-            <td>{{ tempData.density??'N/A' }}</td>
-            <td>{{ tempData.poisson??'N/A' }}</td>
-          </tr>
-        </tbody>
-      </table>
-      <table>
-        <thead>
-          <tr>
-            <th>Temperature</th>
-            <th>Density</th>
-            <th>Poisson's Ratio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <span *ngFor="let tempData of getSortedTemperatureDataLines(material).temperatures">    {{tempData}},</span>
-         
-            </td>
-            <td>
-              <span *ngFor="let densData of getSortedTemperatureDataLines(material).densities">    {{densData}},</span>
-         
-            </td>
-            <td>
-              <span *ngFor="let poisData of getSortedTemperatureDataLines(material).poissons">    {{poisData}},</span>
-         
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <app-density-chart [material]="material"></app-density-chart>
+  <div *ngIf="selectedMaterial$ | async as material; else noMaterial">
+    <div class="header">
+      <h2>Matiére : {{ material.name }}</h2>
+      <div class="display-selector">
+        <select [value]="displayMode" (change)="onDisplayModeChange($event)">
+          <option value="lines">Affichage en lignes</option>
+          <option value="table">Affichage en tableau</option>
+          <option value="chart">Affichage en graphique</option>
+        </select>
+      </div>
     </div>
-    <ng-template #noMaterial>
-      <p *ngIf="selectedProgram && !material">No data for this article</p>
-    </ng-template>
+
+    <div [ngSwitch]="displayMode">
+      <div *ngSwitchCase="'table'">
+        <table>
+          <thead>
+            <tr>
+              <th>Température</th>
+              <th>Densité</th>
+              <th>nuX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tempData of sortedTemperatureData; trackBy: trackByIndex">
+              <td>{{ tempData.temperature }}</td>
+              <td>{{ tempData.density }}</td>
+              <td>{{ tempData.poisson }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div *ngSwitchCase="'lines'">
+        <table>
+          <thead>
+            <tr>
+              <th>Température</th>
+              <th>Densité</th>
+              <th>nuX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span *ngFor="let temperature of sortedDataLinesDisplay.temperatures; trackBy: trackByIndex">{{ temperature }}, </span></td>
+              <td><span *ngFor="let density of sortedDataLinesDisplay.densities; trackBy: trackByIndex">{{ density }}, </span></td>
+              <td><span *ngFor="let poisson of sortedDataLinesDisplay.poissons; trackBy: trackByIndex">{{ poisson }}, </span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div *ngSwitchCase="'chart'">
+        <app-density-chart [material]="material"></app-density-chart>
+      </div>
+
+      <div *ngSwitchDefault>
+        <p>Mode d'affichage invalide</p>
+      </div>
+    </div>
   </div>
-  
+
+  <ng-template #noMaterial>
+    <p *ngIf="selectedProgram && noMaterial">Pas encore de données pour cette pièce</p>
+  </ng-template>
+</div>

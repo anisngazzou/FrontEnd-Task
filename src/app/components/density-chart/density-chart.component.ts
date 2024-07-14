@@ -19,10 +19,10 @@ export class DensityChartComponent implements OnChanges {
   gradient = false;
   showLegend = false;
   showXAxisLabel = true;
-  xAxisLabel = 'Temperature (°C)';
+  xAxisLabel = 'Température (°C)';
   showYAxisLabel = true;
-  yAxisLabelDensity = 'Density';
-  yAxisLabelPoisson = "Poisson's Ratio";
+  yAxisLabelDensity = 'Densité';
+  yAxisLabelPoisson = "nuX";
  
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['material'] && this.material) {

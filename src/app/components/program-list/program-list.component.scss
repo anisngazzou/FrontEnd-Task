@@ -1,47 +1,41 @@
-
 :host {
-    display: block;
-    margin: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  li:hover {
-    // background-color: #ddd;
-    
-  }
-  .li-piece:hover{
-      background-color: #ddd;
-      transform: scale(1.02);
-  }
-  
-  .selected {
-   border: 1px solid #007bff;
-   
-  }
-  
- 
-  
-  .program-name {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .piece-name {
-    color: #555;
-  }
-  
+  display: block;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.li-piece:hover {
+  background-color: #ddd;
+  transform: scale(1.01);
+}
+.selected-piece {
+  background-color: #ddd;
+  transform: scale(1.01);
+}
+
+.selected {
+  border: 2px solid #007bff;
+}
+.program-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.piece-name {
+  color: #555;
+}

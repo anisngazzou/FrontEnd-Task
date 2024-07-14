@@ -1,15 +1,13 @@
 <div *ngIf="programs$ | async as programs">
-
-    <ul>
-      <li *ngFor="let program of programs" 
-      [ngClass]="{'selected': (selectedProgramId$ | async) === program.ID}">
-        {{ program.sName }}
-        <ul (click)="onProgramSelect(program.ID)" >
-          <li class="li-piece" *ngFor="let piece of program.pieces" (click)="onPieceSelect(piece.idMaterial)">
-            {{ piece.sName }}
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  
+  <ul>
+    <li *ngFor="let program of programs" [ngClass]="{'selected': (selectedProgramId$ | async) === program.ID}">
+      {{ program.sName }}
+      <ul (click)="onProgramSelect(program.ID)">
+        <li [ngClass]="{'selected-piece': (selectedPieceId ) === piece.ID}" class="li-piece"
+          *ngFor="let piece of program.pieces" (click)="onPieceSelect(piece.idMaterial,piece.ID)">
+          {{ piece.sName }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

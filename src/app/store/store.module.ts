@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
-import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-
-import { programReducer } from './reducers/program.reducer';
-import { materialReducer } from './reducers/material.reducer';
-import { ProgramEffects } from './effects/program.effects';
+import { StoreModule } from '@ngrx/store';
 import { MaterialEffects } from './effects/material.effects';
+import { ProgramEffects } from './effects/program.effects';
+import { materialReducer } from './reducers/material.reducer';
+import { programReducer } from './reducers/program.reducer';
 
 @NgModule({
   imports: [
