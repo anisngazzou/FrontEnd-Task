@@ -10,8 +10,8 @@ import { Material } from '../models/material.model';
 export class DataService {
   constructor(private http: HttpClient) {}
 
-  getPrograms(): Observable<Program[]> {
-    return this.http.get<Program[]>('/assets/data/program.json');
+  getPrograms(): Observable<{programs:Program[]}> {
+    return this.http.get<{programs:Program[]}>('/assets/data/program.json');
   }
 
   getMaterials(): Observable<Material[]> {

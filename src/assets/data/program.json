@@ -1,4 +1,5 @@
- [
+{
+    "programs": [
         {
             "ID": 2921,
             "sName": "Programme A",
@@ -26,3 +27,4 @@
             ]
         }
     ]
+}

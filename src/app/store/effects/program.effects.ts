@@ -12,7 +12,7 @@ export class ProgramEffects {
       ofType(ProgramActions.loadPrograms),
       mergeMap(() =>
         this.dataService.getPrograms().pipe(
-          map(programs => ProgramActions.loadProgramsSuccess({ programs })),
+          map(programs => ProgramActions.loadProgramsSuccess({ programs:programs.programs })),
           catchError(error => of(ProgramActions.loadProgramsFailure({ error })))
         )
       )
